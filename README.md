@@ -1,4 +1,4 @@
-# My Spendings shows you how much money you have wasted on ```microtransaction``` on Google Play
+# 💸 My Spendings shows you how much money you have wasted on ```microtransaction``` on Google Play
 This simple program makes you regret your many life decisions made on stupid mobages or your other spendings.
 
 It requires you to login to your gmail account through this application I have made
@@ -8,19 +8,19 @@ It requires you to login to your gmail account through this application I have m
 
 _This is project is mainly meant for myself so that I do not need to manually keep track of my spendings by entering in the details manually_
 
-## NOTE
+## NOTE 📝
 **This program does not work properly if you have 2FA turned on for your gmail account**
 Instead, follow the instructions [here](https://support.google.com/accounts/answer/185833) to find out how to login with 2FA enabled
 
 ---
 
-## How it works
+## How it works 🛠
 The program retrieves your emails from the ```Starred``` folder with the title ```Your Google Play Order Receipt```
 
 After it retrieves, it should export out the results into an excel sheet to see an overview of the expenditure
 
 
-## Instructions/Set-Up
+## Instructions/Set-Up 🔨
 1. Search your email using the search bar with this title ```Your Google Play Order Receipt``` and press ```enter```
 ![Search](https://media.discordapp.net/attachments/314385034461315072/795655362761719838/unknown.png) 
 
@@ -48,7 +48,7 @@ Next we will create a filter that filters all incoming message with the Subject 
 
 ---
 
-## Question
+## Question 🟣
 Q: Is this safe to have app password created and enabled?
 A: I cannot guarantee your safety of your Google account for this. But I believe it should be generally safe if you do not share your password to anyone (cap'n obvious)
 
@@ -57,6 +57,5 @@ A: No, its like 50%
 
 Q: When will it be done?
 A: idk
----
 
 
