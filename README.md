@@ -10,7 +10,7 @@ _This is project is mainly meant for myself so that I do not need to manually ke
 
 ## NOTE
 **This program does not work properly if you have 2FA turned on for your gmail account**
-Instead, follow the instructions [here]("https://support.google.com/accounts/answer/185833") to find out how to login with 2FA enabled
+Instead, follow the instructions [here](https://support.google.com/accounts/answer/185833) to find out how to login with 2FA enabled
 
 ---
 
