@@ -17,6 +17,7 @@ Instead, follow the instructions [here](https://support.google.com/accounts/answ
 I have also realized I could have done this the easy way by doing this on [UIPath](https://www.uipath.com/)...
 
 But I guess this is some good practice for python
+
 ---
 
 ## How it works 🛠
@@ -36,6 +37,7 @@ Next we will create a filter that filters all incoming message with the Subject 
 
 
 1. Click on **Settings** > **See All Settings** > **Filters and Blocked Addresses**
+
 ![Click](https://media.discordapp.net/attachments/314385034461315072/795656374938763284/unknown.png)
 
 2. Click on **Create a new filter** and under the Subject, enter ```Your Google Play Order Receipt```
@@ -48,6 +50,7 @@ Next we will create a filter that filters all incoming message with the Subject 
 ![Check](https://media.discordapp.net/attachments/314385034461315072/795656898988605470/unknown.png)
 
 5. Profit: ∞?
+
 _Doing this will **star** all your future incoming messages with the title ```Your Google Play Order Receipt``` which then you can run the program again to get the updated results_
 
 ---
@@ -55,14 +58,14 @@ _Doing this will **star** all your future incoming messages with the title ```Yo
 ## Question 🟣
 Q: Is this safe to have app password created and enabled?
 
-A: I cannot guarantee your safety of your Google account for this. But I believe it should be generally safe if you do not share the app password to anyone
+  A: I cannot guarantee your safety of your Google account for this. But I believe it should be generally safe if you do not share the app password to anyone
 
 Q: Is this completed?
 
-A: No, its like 50%. I am left with exporting the results into an excel sheet
+  A: No, its like 50%. I am left with exporting the results into an excel sheet
 
 Q: When will it be done?
 
-A: idk, maybe when I am free from school?
+  A: idk, maybe when I am free from school?
 
 
