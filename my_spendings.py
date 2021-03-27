@@ -102,12 +102,12 @@ def clickButton():
                         body = msg.get_payload(decode=True).decode()
                         if content_type == "text/plain":
                             print(body)
-                
+                    
                     #if content_type == "text/html":
                         # if it's html, create a new html file and open it in browser
                         # print(body)
                         # return
-
+    #print(type(body)) | determined that body is a string
     # close the connection and logout
     imap.close()
     imap.logout()
