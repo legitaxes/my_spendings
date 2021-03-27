@@ -36,10 +36,10 @@ def clickButton():
     # authenticate with username and password
     imap.login(un,pw)
     print("Login Success!")
-   #print(imap.list())
+   #print(imap.list()) #shows a list of what imap can retrieve from
     status, count = imap.select("[Gmail]/Starred")
     # define the number of mails to retrieve under here
-    N = 5
+    N = 100
     # total number of emails
     count = int(count[0])
     
