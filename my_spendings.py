@@ -14,12 +14,18 @@ username_label = tk.Label(root, text="Email:")
 
 password = tk.Entry(root, show="*", width=25, borderwidth=2)
 password_label = tk.Label(root, text="Password:")
+
+retrieval = tk.Entry(root, width=25, borderwidth=2)
+retrieval_label = tk.Label(root, text="No. Emails to Search:")
+
 #username.insert(0, "johnsmith69@gmail.com")
 #password.insert(0, "")
 username_label.grid(row=0, column=0)
 username.grid(row=0,column=1)
 password_label.grid(row=1, column=0)
 password.grid(row=1,column=1)
+retrieval_label.grid(row=2, column=0)
+retrieval.grid(row=2,column=1)
 
 def clean(text):
     # clean text for creating folder
@@ -40,7 +46,7 @@ def clickButton():
    #print(imap.list()) #shows a list of what imap can retrieve from
     status, count = imap.select("[Gmail]/Starred")
     # define the number of mails to retrieve under here
-    N = 50
+    N = int(retrieval.get())
     # total number of emails
     count = int(count[0])
     
@@ -126,5 +132,5 @@ def clickButton():
 
 
 myButton = tk.Button(root, text="Confirm", command=clickButton)
-myButton.grid(row=2,column=1)
+myButton.grid(row=3,column=1)
 root.mainloop()
