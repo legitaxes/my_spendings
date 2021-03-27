@@ -39,7 +39,7 @@ def clickButton():
    #print(imap.list()) #shows a list of what imap can retrieve from
     status, count = imap.select("[Gmail]/Starred")
     # define the number of mails to retrieve under here
-    N = 100
+    N = 50
     # total number of emails
     count = int(count[0])
     
@@ -83,7 +83,17 @@ def clickButton():
                                 pass
                             if content_type == "text/plain" and "attachment" not in content_disposition:
                                 # print text/plain emails and skip attachments
-                                print(body)
+                                # print(body)
+                                if(body.find("*Order date:*") != -1): #for older google play emails
+                                    print(body[body.find("*Order date:* "):body.find("SGT") + 3]) #older field of order date
+                                    if(body.find("ItemPrice") == -1):
+                                        print(body[body.find("Item Price"):body.find("Total:")]) #item name
+                                    else:
+                                        print(body[body.find("ItemPrice"):body.find("Total:")]) #item name
+                                else:
+                                    print(body[body.find("Order date: "):body.find("SGT") + 3]) #order date
+                                    print(body[body.find("Item Price"):body.find("Total:")]) #item name
+                                print(body[body.find("You've made a purchase from"):body.find("on Google Play.")]) #company name
                             # elif "attachment" in content_disposition:
                             #     # download attachment
                             #     filename = part.get_filename()
@@ -101,8 +111,18 @@ def clickButton():
                         # get the email body
                         body = msg.get_payload(decode=True).decode()
                         if content_type == "text/plain":
-                            print(body)
-                    
+                            #print(body)
+                            if(body.find("*Order date:*") != -1): #for older google play emails
+                                print(body[body.find("*Order date:* "):body.find("SGT") + 3]) #older field of order date
+                                if(body.find("ItemPrice") == -1):
+                                    print(body[body.find("Item Price"):body.find("Total:")]) #item name
+                                else:
+                                    print(body[body.find("ItemPrice"):body.find("Total:")]) #item name
+                            else:
+                                print(body[body.find("Order date: "):body.find("SGT") + 3]) #order date
+                                print(body[body.find("Item Price"):body.find("Total:")]) #item name
+                            print(body[body.find("You've made a purchase from"):body.find("on Google Play.")]) #company name
+
                     #if content_type == "text/html":
                         # if it's html, create a new html file and open it in browser
                         # print(body)
