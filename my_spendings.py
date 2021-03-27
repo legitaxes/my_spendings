@@ -114,7 +114,7 @@ def clickButton():
                             else:
                                 print(body[body.find("Order date: "):body.find("SGT") + 3]) #order date
                                 print(body[body.find("Item Price"):body.find("Total:")]) #item name
-                            #print(body[body.find("You've made a purchase from"):body.find("on Google Play")]) #company name
+                            print(body[body.find("You've made a purchase from"):body.find("on")]) #company name
 
     # close the connection and logout
     print(counter)
