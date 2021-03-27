@@ -62,7 +62,7 @@ Q: Is this safe to have app password created and enabled?
 
 Q: Is this completed?
 
-  A: No, its like 50%. I am left with exporting the results into an excel sheet
+  A: No, its like 75%. I am left with exporting the results into an excel sheet
 
 Q: When will it be done?
 
