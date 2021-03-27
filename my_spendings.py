@@ -27,6 +27,7 @@ def clean(text):
 
 
 def clickButton():
+    counter = 0
     #run the function for getting email from smtp
     print("Retrieving Email..." + " Please Wait a while")
     un = username.get()
@@ -90,21 +91,13 @@ def clickButton():
                                         print(body[body.find("Item Price"):body.find("Total:")]) #item name
                                     else:
                                         print(body[body.find("ItemPrice"):body.find("Total:")]) #item name
+                                    print(body[body.find("You've made a purchase from"):body.find("on Google Play")]) #company name
                                 else:
                                     print(body[body.find("Order date: "):body.find("SGT") + 3]) #order date
                                     print(body[body.find("Item Price"):body.find("Total:")]) #item name
-                                print(body[body.find("You've made a purchase from"):body.find("on Google Play.")]) #company name
-                            # elif "attachment" in content_disposition:
-                            #     # download attachment
-                            #     filename = part.get_filename()
-                            #     if filename:
-                            #         folder_name = clean(subject)
-                            #         if not os.path.isdir(folder_name):
-                            #             # make a folder for this email (named after the subject)
-                            #             os.mkdir(folder_name)
-                            #         filepath = os.path.join(folder_name, filename)
-                            #         # download attachment and save it
-                            #         open(filepath, "wb").write(part.get_payload(decode=True))
+                                    print(body[body.find("You've made a purchase from"):body.find("on Google Play")]) #company name
+                                counter = counter + 1
+                                break
                     else:
                         # extract content type of email
                         content_type = msg.get_content_type()
@@ -112,6 +105,7 @@ def clickButton():
                         body = msg.get_payload(decode=True).decode()
                         if content_type == "text/plain":
                             #print(body)
+                            # print()
                             if(body.find("*Order date:*") != -1): #for older google play emails
                                 print(body[body.find("*Order date:* "):body.find("SGT") + 3]) #older field of order date
                                 if(body.find("ItemPrice") == -1):
@@ -121,14 +115,10 @@ def clickButton():
                             else:
                                 print(body[body.find("Order date: "):body.find("SGT") + 3]) #order date
                                 print(body[body.find("Item Price"):body.find("Total:")]) #item name
-                            print(body[body.find("You've made a purchase from"):body.find("on Google Play.")]) #company name
+                            #print(body[body.find("You've made a purchase from"):body.find("on Google Play")]) #company name
 
-                    #if content_type == "text/html":
-                        # if it's html, create a new html file and open it in browser
-                        # print(body)
-                        # return
-    #print(type(body)) | determined that body is a string
     # close the connection and logout
+    print(counter)
     imap.close()
     imap.logout()
 
@@ -139,26 +129,3 @@ def clickButton():
 myButton = tk.Button(root, text="Confirm", command=clickButton)
 myButton.grid(row=2,column=1)
 root.mainloop()
-# class Application(tk.Frame):
-#     def __init__(self, master=None):
-#         super().__init__(master)
-#         self.master = master
-#         self.pack()
-#         self.create_widgets()
-    
-#     def create_widgets(self):
-#         self.hi_there = tk.Button(self)
-#         self.hi_there["text"] = "Hello World\n(click me faggot)"
-#         self.hi_there["command"] = self.say_hi
-#         self.hi_there.pack(side = "top")
-
-#         self.quit = tk.Button(self, text="Close this shit", fg="red", command = self.master.destroy)
-#         self.quit.pack(side = "bottom")
-    
-#     def say_hi(self):
-#         print("Hi nigger")
-    
-# root = tk.Tk()
-# app = Application(master=root)
-# app.mainloop()
-
